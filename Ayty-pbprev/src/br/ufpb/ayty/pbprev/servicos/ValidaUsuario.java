@@ -20,7 +20,7 @@ public class ValidaUsuario {
 	@Path("/validar-usuario")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public String validaUsuario(String dado) {
+	public String validar(String dado) {
 		try {
 			JSONObject json = new JSONObject(dado);
 			if(UsuarioController.getInstance().validarUsuario(json.getString("Login"), json.getString("Senha"))) {
@@ -38,7 +38,7 @@ public class ValidaUsuario {
 	@Path("/cadastrar-usuario")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public String cadastraUsuario(String dado) {
+	public String cadastrar(String dado) {
 		try {
 			JSONObject json;
 
